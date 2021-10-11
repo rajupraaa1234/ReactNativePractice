@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import { useStores } from './mobx/hooks';
+
 
 
 //Declare Functional Component
@@ -29,8 +31,14 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 
 class DashBoard extends Component{
+
+  // loginStore = useStores();
+
+
    constructor(){
      super();
+
+    // console.log(`My Login data : ${loginStore.LoginedUser}`)
      this.state={
        data : "State data object",
        name : "",
@@ -40,6 +48,8 @@ class DashBoard extends Component{
        }
      }
    }
+
+  
    UpdateStateData(){
      this.setState({data:"Changed Data"})
    }
@@ -148,6 +158,14 @@ class DashBoard extends Component{
               title="ApiNetworking"
                 onPress={()=>
                   this.props.navigation.navigate('ApiNetworkingScreen')
+                }
+              />
+           </View>
+           <View style={{marginTop:10}}>
+           <Button 
+              title="Youtube Button"
+                onPress={()=>
+                  this.props.navigation.navigate('YoutubePlayerScreen')
                 }
               />
            </View>

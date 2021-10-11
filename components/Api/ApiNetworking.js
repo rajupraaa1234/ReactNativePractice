@@ -2,12 +2,16 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
 import { color } from 'react-native-reanimated';
-
+import { useStores } from '../mobx/hooks';
 // create a component
 
 
 
 const ApiNetworking = () => {
+
+    const{loginStore} = useStores();
+
+    console.log(`My Login data : ${loginStore.LoginedUser}`)
 
 
     const onPutPress = () =>{
@@ -92,6 +96,10 @@ const ApiNetworking = () => {
         });
     }
 
+    const onMobxPress = () =>{
+        loginStore.setUser("raju kumar");
+    }
+
 
     return (
         <View style={styles.container}>
@@ -109,7 +117,11 @@ const ApiNetworking = () => {
             <View  style={styles.Btn}>
                   <Button title="POST" onPress={onPOSTPress}/>
             </View>
-           
+            
+            <View style={styles.Btn}>
+                  <Button title="Mobx Save data" onPress={onMobxPress}/>
+            </View>
+
         </View>
     );
 };

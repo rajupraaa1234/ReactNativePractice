@@ -20,6 +20,7 @@
  import PaginationPageScreen from './components/Pagination/PaginationPage';
  import RecyclerPageScreen from './components/RecyclerView/RecyclerPage';
  import ApiNetworkingScreen from './components/Api/ApiNetworking';
+import YoutubePlayerPage from './components/YoutubePlayer';
 
  const Stack = createNativeStackNavigator();
  
@@ -42,7 +43,7 @@
          <Stack.Screen name="PagiationPage" component={PaginationPageScreen}/>
          <Stack.Screen name="RecyclerPage" component={RecyclerPageScreen}/>
          <Stack.Screen name="ApiNetworkingScreen" component={ApiNetworkingScreen}/>
-
+         <Stack.Screen name="YoutubePlayerScreen" component={YoutubePlayerPage}/>
 
        </Stack.Navigator>
      </NavigationContainer>

@@ -5,9 +5,11 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "start": "react-app-rewired start",
+    "test": "react-app-rewired test",
+    "lint": "eslint .",
+    "build": "react-app-rewired build",
+    "eject": "react-app-rewired eject"
   },
   "dependencies": {
     "@react-native-community/geolocation": "^2.0.2",
@@ -17,14 +19,20 @@
     "@react-navigation/native": "^6.0.2",
     "@react-navigation/native-stack": "^6.1.0",
     "axios": "^0.21.4",
+    "customize-cra": "^1.0.0",
     "fbjs": "^3.0.0",
+    "mobx": "^6.3.3",
+    "mobx-react": "^7.2.0",
     "react": "17.0.2",
+    "react-app-rewired": "^2.1.8",
     "react-native": "0.65.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-reanimated": "^2.2.2",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.7.2",
     "react-native-vector-icons": "^8.1.0",
+    "react-native-webview": "^11.14.0",
+    "react-native-youtube-iframe": "^2.1.2",
     "react-navigation": "^4.4.4",
     "react-navigation-drawer": "^2.7.1",
     "react-navigation-tabs": "^2.11.1",
@@ -32,6 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
+    "@babel/plugin-proposal-decorators": "^7.15.4",
     "@babel/runtime": "^7.15.4",
     "@react-native-community/eslint-config": "^3.0.1",
     "babel-jest": "^27.2.0",
